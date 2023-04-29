@@ -43,9 +43,11 @@ function wrongNameAlert(){
   Notiflix.Notify.failure('Oops, there is no country with that name');
 }
 
+const layout
+
 function markupCountryList (country){
   const renderCountryList = country.map(({name, flags}) => {
-    const layout = `
+    layout = `
     <li class='country_list'>
       <img class='country_list--flag' src='${flags.svg}' alt='Flag of ${name.official}'>
       <h2 class='country_list--name'>${name.official}</h2>
@@ -60,7 +62,7 @@ function markupCountryList (country){
 function markupCountryInfo(country) {
   const renderCountryInfo = country
     .map(({name, flags, capital, population, languages}) => {
-      const layout = `
+      layout = `
         <ul class='country_info'>
           <li class='country_info--item'>
             <img class='country_info--flag' src='${flags.svg}' alt='Flag of ${name.official}'>
@@ -76,3 +78,6 @@ function markupCountryInfo(country) {
     .join('');
   return renderCountryInfo;
 }
+
+
+
